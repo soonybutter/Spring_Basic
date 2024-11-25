@@ -5,15 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
-	<bean id="student" class="com.test03.Student"/>
-	<bean id="teacher" class="com.test03.Teacher"/>
+	<aop:aspectj-autoproxy/>
 	
-	<bean id="myAspect" class="com.test03.MyAspect"/>
-	<aop:config>
-		<aop:aspect ref="myAspect">
-			<aop:before method="before" pointcut="execution(public * *(..))"/>
-			<aop:before method="after" pointcut="execution(public * *(..))"/>
-		</aop:aspect>
-	</aop:config>
+	<bean id="student" class="com.test05.Student"/>
+	<bean id="teacher" class="com.test05.Teacher"/>
+	
+	<bean id="myAspect" class="com.test05.MyAspect"/>
 
 </beans>
