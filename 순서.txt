@@ -1,0 +1,10 @@
+SpringMVC03
+1. pom.xml : ojdbc, mybatis, mybatis-spring, commons-dbcp, spring-orm 
+-> mvn repository에서 jar 파일들 추가 하기!
+2. web.xml :
+3. /WEB-INF/spring/sqls/sql.txt
+4. dto, dao, biz, controller
+5. src/main/resources/mybatis/board-mapper.xml 만들기
+6. src/main/resources/mybatis/db.properties
+7. ./WEB-INF/spring/sqls/config.xml
+8. applicationContext, servlet-context
