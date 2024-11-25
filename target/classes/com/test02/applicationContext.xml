@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<bean id="student" class="com.test02.Student"/>
-	<bean id="teacher" class="com.test02.Teacher"/>
+	<context:annotation-config/>
+
+	<!-- <context:componetn-scan base-package= "com.test02"/>  -->
 	
-	<!-- CCC -->
-	<bean id="myAdvice" class="com.test02.MyAspect"/>
-	<!-- proxy -->
-	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
-	<!-- advice+pointcut -->
-	<bean id = "myAdvisor" class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
-		<property name="advice" ref="myAdvice"/>
-		<property name="expression" value="execution(public * *(..))"/>
+	<bean id="yang" class="com.test02.Student">
+		<property name="name" value="양다연"/>
+		<property name="addr" value="전주시 덕진구"/>
+		<property name="age" value="25"/>
+	</bean>
+	<bean id="park" class="com.test02.Student">
+		<property name="name" value="박준형"/>
+		<property name="addr" value="서울시 강남구"/>
+		<property name="age" value="28"/>
 		
 	</bean>
+	<bean id="mySchool" class="com.test02.School">
+		<property name="grade" value="1"/>
+	</bean>
+
 </beans>
