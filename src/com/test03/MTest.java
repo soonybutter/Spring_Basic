@@ -9,13 +9,14 @@ public class MTest {
 		ApplicationContext factory =
 				new ClassPathXmlApplicationContext("com/test03/applicationContext.xml");
 		
-		Person s =factory.getBean("student", Person.class);
-		Person t = factory.getBean("teacher",Person.class);
-		System.out.println("학생");
-		s.classWork();
-		System.out.println("-------------");
-		System.out.println("강사");
-		t.classWork();
+		TV tv = factory.getBean("lgTV", TV.class);
+		tv.powerOn();
+		tv.powerOff();
+		
+		tv = (TV)factory.getBean("sam"); //component annotation 할때 이름을 "sam"으로 해줌!
+		tv.powerOn();
+		
+		
 
 	}
 
