@@ -1,0 +1,41 @@
+SpringMVC03
+1. pom.xml : ojdbc, mybatis, mybatis-spring, commons-dbcp, spring-orm 
+-> mvn repository에서 jar 파일들 추가 하기!
+2. web.xml :
+3. /WEB-INF/spring/sqls/sql.txt
+4. dto, dao, biz, controller
+5. src/main/resources/mybatis/board-mapper.xml 만들기
+6. src/main/resources/mybatis/db.properties
+7. ./WEB-INF/spring/sqls/config.xml
+8. applicationContext, servlet-context
+
+
+_filter
+9. com/mvc/upgrade/common/filter/LogFilter.java
+10. web.xml : filter
+
+_aop
+11. pom.xml :aspectjweaver, aspectjrt 추가하기
+12. com/mvc/upgrade./common/aop/LogAop
+13. WEB-INF / spring/ appServlet/aop-context.xml 만들기 (spring bean configuration file로 )
+14. web.xml에 설정파일들 추가하기.
+
+_login
+15. pom.xml : jackson-core, jackson-databind : dependency 2개 추가해주기.
+16. WEB-INF/spring/sqls/sql.txt 만들기.
+17. dto,dao,biz,controller 
+18. src/main/resources/mybatis/member-mapper.xml
+19. WEB-INF/spring/sqls/config.xml
+
+_interceptor
+20. com/mvc/upgrade/common/interceptor/LoginInterceptor
+21. servlet-context.xml : interceptor 추가
+
+
+_transaction
+22.(Board) dao, biz, controller
+23. servlet-context.xml : namespace에 tx 체크
+24. applicationContext.xml
+
+
+
