@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2><a href="test.do">home</a></h2>
+	<!-- a태그 클릭하여 home.jsp 화면에서 확인하기 -->
+	<h2><a href="command.do?name=spring&addr=전주시&phone=010-1234-5678">getCommand</a></h2>
+	<br>
+	<form action="command.do" method="post">
+		<table>
+			<tr>
+				<th>name</th>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<th>addr</th>
+				<td><input type="text" name="addr"></td>
+			</tr>
+			<tr>
+				<th>phone</th>
+				<td><input type="text" name="phone"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="postCommand">
+				</td>
+			</tr>
+		</table>
+	</form>
+	<hr>
+	<form action="score.do" method="post">
+	<table>
+		<tr>	
+			<th>name</th>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>	
+			<th>kor</th>
+			<td><input type="text" name="kor"></td>
+		</tr>
+		<tr>	
+			<th>eng</th>
+			<td><input type="text" name="eng"></td>
+		</tr>
+		<tr>	
+			<th>math</th>
+			<td><input type="text" name="math"></td>
+		</tr>
+		<tr>	
+			<th>확인</th>
+			<td colspan="2"><input type="submit" name="확인"></td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
